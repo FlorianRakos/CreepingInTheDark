@@ -15,7 +15,7 @@ public class EnemyAI : MonoBehaviour
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
-    
+
 
 
 
@@ -28,37 +28,47 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         distanceToTarget = Vector3.Distance(transform.position, target.position);
-        if (isProvoked) {
+        if (isProvoked)
+        {
             EngageTarget();
-        } else if (distanceToTarget <= chaseRange)
+        }
+        else if (distanceToTarget <= chaseRange)
         {
             isProvoked = true;
-        }        
+        }
     }
 
     private void EngageTarget()
     {
-        if (distanceToTarget <= navMeshAgent.stoppingDistance) {
+        if (distanceToTarget <= navMeshAgent.stoppingDistance)
+        {
             AttackTarget();
-        } else {
+        }
+        else
+        {
             ChaseTarget();
         }
-        
+
     }
 
     private void AttackTarget()
     {
+        GetComponent<Animator>().SetBool("attack", true);
         print("atacking Player");
     }
 
     private void ChaseTarget()
     {
-        navMeshAgent.SetDestination(target.position);;
+        print("chasing");
+        GetComponent<Animator>().SetTrigger("move");
+        GetComponent<Animator>().SetBool("attack", false);
+        navMeshAgent.SetDestination(target.position);
     }
 
 
-    void OnDrawGizmosSelected() {
-        Gizmos.color= new Color (1, 0, 0, 0.5f);
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawWireSphere(transform.position, chaseRange);
         //Gizmos.color= new Color (1, 0, 1, 0.5f);
         //Gizmos.DrawWireSphere(transform.position, navMeshAgent.stoppingDistance);

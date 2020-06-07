@@ -108,6 +108,8 @@ GameObject:
   - component: {fileID: 5755979401361255670}
   - component: {fileID: 5755979401361255667}
   - component: {fileID: 5824868353560275196}
+  - component: {fileID: 4632344475302925699}
+  - component: {fileID: 3191894817469113262}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -239,3 +241,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6e27739bd615f04fa402cf1cfe921d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitPoints: 100
+--- !u!114 &4632344475302925699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755979401361255657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bf25d151e9ef148a55016cd74721cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  damage: 40
+--- !u!95 &3191894817469113262
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755979401361255657}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: db734c4f17e685b46b99c2df1016ed60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
