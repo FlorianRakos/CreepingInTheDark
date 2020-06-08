@@ -49,7 +49,7 @@ public class Weapon : MonoBehaviour
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, shootingRange))
         {
             CreateHitImpact(hit);
-            print(hit.transform.name);
+            //print(hit.transform.name);
             // todo: add some hit FX
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target != null)
