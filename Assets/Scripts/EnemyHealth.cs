@@ -13,7 +13,7 @@ public class EnemyHealth : MonoBehaviour
     // public method
     public void decreaseHealth (float decrease) {
         hitPoints -= decrease;
-
+        BroadcastMessage("OnDamageTaken");
         if (hitPoints <= 0) {
             KillEnemy();
         }
