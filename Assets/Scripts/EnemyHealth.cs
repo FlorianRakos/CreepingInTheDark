@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 public class EnemyHealth : MonoBehaviour
@@ -22,6 +23,9 @@ public class EnemyHealth : MonoBehaviour
 
     private void KillEnemy()
     {
-        Destroy(gameObject);
+        GetComponent<Animator>().SetTrigger("die");
+        GetComponent<NavMeshAgent>().enabled = false;
+        GetComponent<Collider>().enabled = false;
+        GetComponent<EnemyAI>().enabled = false;
     }
 }

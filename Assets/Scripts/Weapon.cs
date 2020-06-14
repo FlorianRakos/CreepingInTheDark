@@ -13,28 +13,37 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
     [SerializeField] float timeBetweenShots = .3f;
+    [SerializeField] AmmoType ammoType;
 
-    bool canShoot = true;
+    [SerializeField] bool canShoot = true;
 
 
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
 
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && canShoot) {
-            StartCoroutine (Shoot());
+        if (Input.GetMouseButtonDown(0) && canShoot)
+        {
+            StartCoroutine(Shoot());
         }
+
+
     }
 
     IEnumerator Shoot()
     {
         canShoot = false;
-        if (ammoSlot.GetCurrentAmmo() > 0) {
-          ammoSlot.ReduceCurrentAmmo();
-        PlayMuzzleFlash();
-        PlayShootingAnimation();
-        ProcessRaycast();  
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
+        {
+            ammoSlot.ReduceCurrentAmmo(ammoType);
+            PlayMuzzleFlash();
+            PlayShootingAnimation();
+            ProcessRaycast();
         }
-      // else play click sound  
+        // else play click sound  
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
@@ -79,6 +88,6 @@ public class Weapon : MonoBehaviour
     private void CreateHitImpact(RaycastHit hit)
     {
         var impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy (impact, 2f);
+        Destroy(impact, 2f);
     }
 }

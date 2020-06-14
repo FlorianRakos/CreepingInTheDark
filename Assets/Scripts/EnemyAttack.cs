@@ -20,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
   }
 
   public void OnDamageTaken() {
-    print("Rage Mode");
+    
   }
 
 }

@@ -279,6 +279,8 @@ MonoBehaviour:
     type: 3}
   ammoSlot: {fileID: 0}
   timeBetweenShots: 0.1
+  ammoType: 2
+  canShoot: 1
 --- !u!1001 &916532651740304788
 PrefabInstance:
   m_ObjectHideFlags: 0

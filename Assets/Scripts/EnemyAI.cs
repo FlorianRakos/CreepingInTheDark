@@ -20,6 +20,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        target = FindObjectOfType<PlayerHealth>().transform;
     }
 
 
@@ -44,7 +45,7 @@ public class EnemyAI : MonoBehaviour
     {
         FaceTarget();
         
-        if (distanceToTarget <= navMeshAgent.stoppingDistance)
+        if (distanceToTarget <= navMeshAgent.stoppingDistance + .1f)
         {
             AttackTarget();
         }

@@ -121,6 +121,8 @@ MonoBehaviour:
     type: 3}
   ammoSlot: {fileID: 0}
   timeBetweenShots: 0.8
+  ammoType: 1
+  canShoot: 1
 --- !u!1 &4968265804524810077
 GameObject:
   m_ObjectHideFlags: 0
