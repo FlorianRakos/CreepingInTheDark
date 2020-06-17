@@ -14,7 +14,6 @@ public class Weapon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
     [SerializeField] float timeBetweenShots = .3f;
     [SerializeField] AmmoType ammoType;
-
     [SerializeField] bool canShoot = true;
 
 
@@ -90,4 +89,6 @@ public class Weapon : MonoBehaviour
         var impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(impact, 2f);
     }
+
+    
 }

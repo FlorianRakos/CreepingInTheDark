@@ -53,7 +53,6 @@ public class EnemyAI : MonoBehaviour
         {
             ChaseTarget();
         }
-
     }
 
     private void AttackTarget()

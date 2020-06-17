@@ -19,8 +19,5 @@ public class EnemyAttack : MonoBehaviour
       target.TakeDamage(damage);
   }
 
-  public void OnDamageTaken() {
-    
-  }
 
 }
