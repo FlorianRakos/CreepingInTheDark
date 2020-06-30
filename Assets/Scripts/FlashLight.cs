@@ -9,9 +9,9 @@ public class FlashLight : MonoBehaviour
     [SerializeField] float charge = 1f;
     [SerializeField] float flashingTime = .2f;
     bool lightActive = true;
-
     float brightness;
     Light myLight;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +44,7 @@ public class FlashLight : MonoBehaviour
             //StartCoroutine(LightFlashing());
         }
         
+        FindObjectOfType<BatteryBar>().adjustBatteryBar(charge);
     }
 
     IEnumerator LightFlashing () {

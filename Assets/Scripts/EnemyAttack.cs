@@ -15,8 +15,13 @@ public class EnemyAttack : MonoBehaviour
 
   public void AttackHitEvent()
   {
-      if (target == null) return;
-      target.TakeDamage(damage);
+    if (target == null) return;
+    target.TakeDamage(damage);
+
+  }
+
+  public void AttackStartEvent() {
+    GetComponent<EnemySound>().PlayAttackSound();
   }
 
 

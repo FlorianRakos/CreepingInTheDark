@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour
     {
         bloodCanvasChildren = bloodCanvas.GetComponentsInChildren<Image>();
         length = bloodCanvasChildren.Length;
-        print(length);
         RemoveBloodFX();       
     }
 
@@ -38,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-  
+        FindObjectOfType<HealthBar>().adjustHealthbar(healthPoints);
     }
 
 
