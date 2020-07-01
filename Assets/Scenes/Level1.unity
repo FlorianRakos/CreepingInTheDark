@@ -5519,79 +5519,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1393345443}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &109611072
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 109611073}
-  - component: {fileID: 109611075}
-  - component: {fileID: 109611074}
-  m_Layer: 5
-  m_Name: Blood Splatter (6)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &109611073
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109611072}
-  m_LocalRotation: {x: -0, y: -0, z: -0.008810981, w: 0.99996126}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9182348, y: 1.9182348, z: 1.9182348}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.01}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 165, y: -119}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &109611074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109611072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &109611075
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109611072}
-  m_CullTransparentMesh: 0
 --- !u!43 &110810571
 Mesh:
   m_ObjectHideFlags: 0
@@ -6993,6 +6920,10 @@ PrefabInstance:
     - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: c6453f8e1f814744d8b94e5a6d1f9942, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12838,79 +12769,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 725582599}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &450975925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 450975926}
-  - component: {fileID: 450975928}
-  - component: {fileID: 450975927}
-  m_Layer: 5
-  m_Name: Blood Splatter (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &450975926
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450975925}
-  m_LocalRotation: {x: -0, y: -0, z: -0.008810981, w: 0.99996126}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9182348, y: 1.9182348, z: 1.9182348}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.01}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -54, y: 139}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &450975927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450975925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &450975928
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450975925}
-  m_CullTransparentMesh: 0
 --- !u!1001 &465958593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15080,79 +14938,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &670532712
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 670532713}
-  - component: {fileID: 670532715}
-  - component: {fileID: 670532714}
-  m_Layer: 5
-  m_Name: Blood Splatter (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &670532713
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670532712}
-  m_LocalRotation: {x: -0, y: -0, z: -0.008810981, w: 0.99996126}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9182348, y: 1.9182348, z: 1.9182348}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.01}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -233, y: -82}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &670532714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670532712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &670532715
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670532712}
-  m_CullTransparentMesh: 0
 --- !u!43 &694751018
 Mesh:
   m_ObjectHideFlags: 0
@@ -15838,79 +15623,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 784827922}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &792218288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 792218289}
-  - component: {fileID: 792218291}
-  - component: {fileID: 792218290}
-  m_Layer: 5
-  m_Name: Blood Splatter (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &792218289
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792218288}
-  m_LocalRotation: {x: -0, y: -0, z: -0.17093202, w: 0.98528284}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.465644, y: 1.465644, z: 1.465644}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -19.684}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -248.11, y: -97.522}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &792218290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792218288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &792218291
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 792218288}
-  m_CullTransparentMesh: 0
 --- !u!43 &794090268
 Mesh:
   m_ObjectHideFlags: 0
@@ -19581,121 +19293,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 346017624}
     m_Modifications:
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].time
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].inSlope
-      value: -20.007967
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[0].outSlope
-      value: -20.007967
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].inSlope
-      value: -5.0019917
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].outSlope
-      value: -5.0019917
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].time
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].value
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].inSlope
-      value: -1.2504979
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[2].outSlope
-      value: -1.2504979
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[3].time
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[3].value
-      value: 0.125
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[3].inSlope
-      value: -0.31262448
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[3].outSlope
-      value: -0.31262448
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[4].time
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[4].value
-      value: 0.0625
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[4].inSlope
-      value: -0.07815612
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[4].outSlope
-      value: -0.07815612
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[5].time
-      value: 0.9961548
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[5].inSlope
-      value: -0.05001994
-      objectReference: {fileID: 0}
-    - target: {fileID: 5439088832136579577, guid: 9843e27d293f5c943ae3f077b56acba0,
-        type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[5].outSlope
-      value: -0.05001994
-      objectReference: {fileID: 0}
     - target: {fileID: 5755979401361255657, guid: 9843e27d293f5c943ae3f077b56acba0,
         type: 3}
       propertyPath: m_Name
@@ -19776,6 +19373,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 259859606}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1205363276
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1205363275}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40534ffb7c4ad9545abc14a2b58f4211, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &1205363282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20369,79 +19985,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1337754805}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1342017191
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1342017192}
-  - component: {fileID: 1342017194}
-  - component: {fileID: 1342017193}
-  m_Layer: 5
-  m_Name: Blood Splatter (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1342017192
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342017191}
-  m_LocalRotation: {x: -0, y: -0, z: -0.008810981, w: 0.99996126}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.9182348, y: 1.9182348, z: 1.9182348}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.01}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.198, y: -70.367}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1342017193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342017191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1342017194
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342017191}
-  m_CullTransparentMesh: 0
 --- !u!43 &1348367792
 Mesh:
   m_ObjectHideFlags: 0
@@ -21968,79 +21511,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1676249030}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1480006995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1480006996}
-  - component: {fileID: 1480006998}
-  - component: {fileID: 1480006997}
-  m_Layer: 5
-  m_Name: Blood Splatter
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1480006996
+--- !u!224 &1480006996 stripped
 RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7058666315803743934}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480006995}
-  m_LocalRotation: {x: -0, y: -0, z: 0.24557014, w: 0.9693788}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1806, y: 1.1806, z: 1.1806}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.431002}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250.47, y: 92.562}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1480006997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480006995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1480006998
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1480006995}
-  m_CullTransparentMesh: 0
 --- !u!1 &1487276316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8296172668118671774, guid: c6453f8e1f814744d8b94e5a6d1f9942,
@@ -22873,6 +22349,7 @@ GameObject:
   - component: {fileID: 1542867428}
   - component: {fileID: 1542867427}
   - component: {fileID: 1542867426}
+  - component: {fileID: 1542867429}
   m_Layer: 5
   m_Name: Blood
   m_TagString: Untagged
@@ -22892,12 +22369,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1480006996}
-  - {fileID: 2103583236}
-  - {fileID: 792218289}
-  - {fileID: 1342017192}
-  - {fileID: 450975926}
-  - {fileID: 670532713}
-  - {fileID: 109611073}
   m_Father: {fileID: 2064360301}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22966,6 +22437,24 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1542867429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1542867424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22510e5f00eefc43bbee7cca204ee04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodSpatterPrefab: {fileID: 7058666317276531691, guid: 78d44c0a7aae050478bc2f1104548ff5,
+    type: 3}
+  xMin: 100
+  xMax: 2000
+  yMin: 100
+  yMax: 1000
 --- !u!1001 &1546456195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28574,79 +28063,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &2103583235
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2103583236}
-  - component: {fileID: 2103583238}
-  - component: {fileID: 2103583237}
-  m_Layer: 5
-  m_Name: Blood Splatter (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2103583236
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103583235}
-  m_LocalRotation: {x: -0, y: -0, z: -0.32143122, w: 0.9469329}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3169593, y: 1.3169593, z: 1.3169593}
-  m_Children: []
-  m_Father: {fileID: 1542867425}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -37.499}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 211.17, y: 61.866}
-  m_SizeDelta: {x: 406.4, y: 269.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2103583237
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103583235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f3c875e7b093fd4ca9b2977296bee8e, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2103583238
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103583235}
-  m_CullTransparentMesh: 0
 --- !u!1 &2106028791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2008851201, guid: c6453f8e1f814744d8b94e5a6d1f9942,
@@ -29132,6 +28548,130 @@ PrefabInstance:
       objectReference: {fileID: 1804930748}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad867970de4a474785fb5e9c40ff312, type: 3}
+--- !u!1001 &7058666315803743934
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1542867425}
+    m_Modifications:
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 406.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 269.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531690, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531693, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_Name
+      value: Blood Splatter
+      objectReference: {fileID: 0}
+    - target: {fileID: 7058666317276531693, guid: 78d44c0a7aae050478bc2f1104548ff5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 78d44c0a7aae050478bc2f1104548ff5, type: 3}
 --- !u!1001 &7160929575464315175
 PrefabInstance:
   m_ObjectHideFlags: 0

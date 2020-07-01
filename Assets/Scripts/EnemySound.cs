@@ -29,8 +29,6 @@ public class EnemySound : MonoBehaviour
         int clipAmount = clips.Length;
         int random = Random.Range(0, clipAmount);
 
-
-        print(random);
         AudioClip clip = clips[random];
         return clip;
     }
