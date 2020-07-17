@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 3191894817469113262}
   - component: {fileID: 7931314636919046876}
   - component: {fileID: 5439088832136579577}
+  - component: {fileID: 6686919968063367158}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -90,9 +91,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.25
-  m_Height: 1.85
+  m_Height: 1.62
   m_Direction: 1
-  m_Center: {x: 0, y: 0.89, z: 0}
+  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!195 &5755979401361255670
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -199,6 +200,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 22feacf4848743943a5490b701782a6f, type: 3}
   - {fileID: 8300000, guid: 1c6452e66ef1b4a44bded6312cb9232c, type: 3}
   - {fileID: 8300000, guid: 8b22a07423293f84db78cf924ce53568, type: 3}
+  hitImpact: {fileID: 8300000, guid: 2cea2c4691fe7bb41a0f9a17c7310f76, type: 3}
   minTime: 5
   maxTime: 15
 --- !u!82 &5439088832136579577
@@ -333,6 +335,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &6686919968063367158
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5755979401361255657}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.15
+  m_Center: {x: 0, y: 1.68, z: 0}
 --- !u!1001 &5154589303425827357
 PrefabInstance:
   m_ObjectHideFlags: 0

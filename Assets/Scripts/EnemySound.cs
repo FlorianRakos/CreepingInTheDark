@@ -6,6 +6,7 @@ public class EnemySound : MonoBehaviour
 {
     [SerializeField] AudioClip[] AttackSounds;
     [SerializeField] AudioClip[] IdleSounds;
+    [SerializeField] AudioClip hitImpact;
     [SerializeField] float minTime = 5f;
     [SerializeField] float maxTime = 15f;
 
@@ -23,7 +24,20 @@ public class EnemySound : MonoBehaviour
         audioSource.PlayOneShot(myClip);
     }
 
+    public void PlayHitImpactSound() {
+        audioSource.PlayOneShot(hitImpact, 1f);
+    }
 
+    IEnumerator PlayIdleSounds () {
+        float idleRange = (Random.Range(minTime, maxTime));
+
+        yield return new WaitForSeconds(idleRange);
+        AudioClip myClip = GetRandomClip(IdleSounds);
+        if(GetComponent<EnemyAI>().enabled) {
+          audioSource.PlayOneShot(myClip);  
+          StartCoroutine(PlayIdleSounds());
+        }
+    }
 
     private AudioClip GetRandomClip(AudioClip[] clips) {
         int clipAmount = clips.Length;
@@ -33,17 +47,7 @@ public class EnemySound : MonoBehaviour
         return clip;
     }
 
-    IEnumerator PlayIdleSounds () {
-        float idleRange = (Random.Range(minTime, maxTime));
 
-        yield return new WaitForSeconds(idleRange);
-        AudioClip myClip = GetRandomClip(IdleSounds);
-        audioSource.PlayOneShot(myClip);
-
-        if(GetComponent<EnemyAI>().enabled) {
-            StartCoroutine(PlayIdleSounds());
-        }
-    }
     
 
 }

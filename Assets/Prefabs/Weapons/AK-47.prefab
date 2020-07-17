@@ -110,7 +110,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5239133893426977360}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.00000008293513, y: -0.00000019206, z: 0.00000009893031}
 --- !u!33 &8977327887658818364
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -169,9 +169,8 @@ GameObject:
   - component: {fileID: 5239133893426977360}
   - component: {fileID: 3886081167658819686}
   - component: {fileID: 7409172700325239967}
-  - component: {fileID: 4424175768808417227}
   - component: {fileID: 3172765605862286630}
-  - component: {fileID: 4694857482483396533}
+  - component: {fileID: 8849103127857738869}
   m_Layer: 0
   m_Name: AK-47
   m_TagString: Untagged
@@ -243,23 +242,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!111 &4424175768808417227
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9146385729339418691}
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Animation: {fileID: -3704289112126983070, guid: 895d63c2571c89d428ca3bc34ca53ca4,
-    type: 3}
-  m_Animations:
-  - {fileID: -3704289112126983070, guid: 895d63c2571c89d428ca3bc34ca53ca4, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!114 &3172765605862286630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,7 +266,9 @@ MonoBehaviour:
   canShoot: 1
   ammoText: {fileID: 0}
   weaponShootingAudio: {fileID: 0}
---- !u!95 &4694857482483396533
+  isFullyAutomatic: 1
+  bloodVFX: {fileID: 0}
+--- !u!95 &8849103127857738869
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

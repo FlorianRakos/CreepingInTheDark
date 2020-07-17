@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<Animator>().SetTrigger("die");
         GetComponent<NavMeshAgent>().enabled = false;
         GetComponent<Collider>().enabled = false;
+        GetComponent<SphereCollider>().enabled = false;        
         GetComponent<EnemyAI>().enabled = false;
     }
 }

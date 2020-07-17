@@ -18,25 +18,35 @@ public class Weapon : MonoBehaviour
     [SerializeField] bool canShoot = true;
     [SerializeField] TextMeshProUGUI ammoText;
     [SerializeField] AudioClip weaponShootingAudio;
+    [SerializeField] bool isFullyAutomatic = false;
+
+    [SerializeField] ParticleSystem bloodVFX;
 
     AudioSource audioSource;
-    
+
 
     private void OnEnable()
     {
         canShoot = true;
     }
 
-    void Start ()
+    void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && canShoot)
+        if (isFullyAutomatic)
         {
-            StartCoroutine(Shoot());
+            if (Input.GetMouseButton(0) && canShoot)
+            { StartCoroutine(Shoot()); }
         }
+        else
+        {
+            if (Input.GetMouseButtonDown(0) && canShoot)
+            { StartCoroutine(Shoot()); }
+        }
+
 
         DisplayAmmo();
 
@@ -73,8 +83,8 @@ public class Weapon : MonoBehaviour
 
     private void PlayShootingAnimation()
     {
-        //Animation  animation = GetComponent<Animation>();
-        //animation.Play();
+        Animator animator = GetComponent<Animator>();
+        animator.SetTrigger("shoot");
     }
 
     private void PlayMuzzleFlash()
@@ -93,7 +103,12 @@ public class Weapon : MonoBehaviour
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target != null)
             {
-                target.decreaseHealth(damage);
+                if(hit.collider.GetType() == typeof(SphereCollider)) {
+                    target.decreaseHealth(damage * 5f);
+                } else {
+                  target.decreaseHealth(damage);  
+                }
+                
 
             }
 
@@ -108,8 +123,29 @@ public class Weapon : MonoBehaviour
 
     private void CreateHitImpact(RaycastHit hit)
     {
-        var impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy(impact, 2f);
+        Transform hitTransform = hit.collider.gameObject.transform;
+
+        if (hit.collider.gameObject.GetComponent<EnemyHealth>())
+        {
+            var impact = Instantiate(bloodVFX, hit.point, Quaternion.LookRotation(hit.normal));
+
+            impact.transform.parent = hitTransform;
+            var main = impact.main;
+
+            main.simulationSpace = ParticleSystemSimulationSpace.Custom;
+            main.customSimulationSpace = hitTransform;
+
+            hitTransform.gameObject.GetComponent<EnemySound>().PlayHitImpactSound();
+
+            Destroy(impact, 2f);
+            print("zombie");
+        }
+        else
+        {
+            var impact = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impact, 2f);
+        }
+
     }
 
 
