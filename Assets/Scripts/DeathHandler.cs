@@ -6,16 +6,20 @@ public class DeathHandler : MonoBehaviour
 {
 
     [SerializeField] Canvas gameOverCanvas;
+    AudioSource audioSource;
 
     private void Start () {
+        audioSource = GetComponent<AudioSource>();
         gameOverCanvas.enabled = false;
     }
 
     public void HandlePlayerDeath () {
         gameOverCanvas.enabled = true;
         Time.timeScale = 0;
-        FindObjectOfType<WeaponSwitcher>().enabled = false;
 
+        audioSource.enabled = false;
+    
+        FindObjectOfType<WeaponSwitcher>().enabled = false;
         Weapon[] weapons = FindObjectsOfType<Weapon>();
         foreach (Weapon weapon in weapons)
         {
@@ -24,5 +28,7 @@ public class DeathHandler : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        
     }
 }

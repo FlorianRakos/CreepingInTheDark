@@ -42,8 +42,10 @@ public class GameEnd : MonoBehaviour
         GenerateWinCanvasText();
 
         Time.timeScale = 0;
-        FindObjectOfType<WeaponSwitcher>().enabled = false;
 
+        FindObjectOfType<PlayerHealth>().GetComponent<AudioSource>().enabled = false;
+
+        FindObjectOfType<WeaponSwitcher>().enabled = false;
         Weapon[] weapons = FindObjectsOfType<Weapon>();
         foreach (Weapon weapon in weapons)
         {
