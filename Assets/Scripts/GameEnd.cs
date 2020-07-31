@@ -11,8 +11,12 @@ public class GameEnd : MonoBehaviour
     [SerializeField] Canvas WinCanvas;
     [SerializeField] Canvas ammoCanvas;
     [SerializeField] Canvas background;
+    [SerializeField] Canvas batteryCanvas, healthCanvas;
+    
     [SerializeField] TextMeshProUGUI enemysKilledText;
     [SerializeField] TextMeshProUGUI pickupsFoundText;
+
+    [SerializeField] Animator animator;
 
 
     EnemyHealth[] enemysTotal;
@@ -36,7 +40,10 @@ public class GameEnd : MonoBehaviour
 
     private void InitWinSequence()
     {
+        DisableAudioRelated();
         ammoCanvas.enabled = false;
+        batteryCanvas.enabled = false;
+        
         background.enabled = true;
         WinCanvas.enabled = true;
         GenerateWinCanvasText();
@@ -54,7 +61,12 @@ public class GameEnd : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         
+        
+    }
 
+    private void DisableAudioRelated()
+    {
+        ;
     }
 
     private void GenerateWinCanvasText()
