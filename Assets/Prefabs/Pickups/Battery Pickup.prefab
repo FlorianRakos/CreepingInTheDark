@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6e37b310321554ba1937c30ceab44f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  batteryPickupSound: {fileID: 8300000, guid: 95199832f3c571746b9ff1891e3c9700, type: 3}
 --- !u!135 &6592847431571200671
 SphereCollider:
   m_ObjectHideFlags: 0

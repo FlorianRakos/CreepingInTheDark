@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class BatteryPickup : MonoBehaviour
 {
+    
 
 
     void OnTriggerEnter(Collider other) {
@@ -16,6 +17,7 @@ public class BatteryPickup : MonoBehaviour
     private void PickUpBattery()
     {
         FindObjectOfType<FlashLight>().IncreaseBatteryCharge();
+        FindObjectOfType<SoundOnPlayer>().playBatteryPickupSound();
         Destroy(gameObject);
     }
 }

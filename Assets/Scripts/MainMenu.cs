@@ -5,6 +5,8 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {   
     [SerializeField] Canvas mainCanvas, storyCanvas, controllCanvas, mainBackground, storyBackground;
+    [SerializeField] AudioClip buttonSound;
+    [SerializeField] AudioSource audioSource;
     
 
     void Start()
@@ -39,4 +41,7 @@ public class MainMenu : MonoBehaviour
         storyBackground.enabled = false;
     }
     
+    public void playButtonSound () {
+        audioSource.PlayOneShot(buttonSound);
+    }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundOnPlayer : MonoBehaviour
 {
     [SerializeField] AudioClip ammoPickup;
+    [SerializeField] AudioClip batteryPickup;
 
     AudioSource audioSource;
 
@@ -24,5 +25,9 @@ public class SoundOnPlayer : MonoBehaviour
     public void playAmmoPickupSound() {
         audioSource.PlayOneShot(ammoPickup);
         print("should play");
+    }
+
+    public void playBatteryPickupSound() {
+        audioSource.PlayOneShot(batteryPickup);
     }
 }

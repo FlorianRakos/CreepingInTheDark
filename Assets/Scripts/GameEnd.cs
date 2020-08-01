@@ -17,6 +17,7 @@ public class GameEnd : MonoBehaviour
     [SerializeField] TextMeshProUGUI pickupsFoundText;
 
     [SerializeField] Animator animator;
+    [SerializeField] AudioSource ambientSounds;
 
 
     EnemyHealth[] enemysTotal;
@@ -34,21 +35,26 @@ public class GameEnd : MonoBehaviour
 
     void OnTriggerEnter(Collider other) {
         if(other.GetComponent<PlayerHealth>() != null) {
-            InitWinSequence();
+            animator.SetTrigger("FadeStart");
+            StartCoroutine (FadeOutSounds ());
+            Invoke("InitWinSequence", 2f);
         }
     }
 
     private void InitWinSequence()
     {
-        DisableAudioRelated();
+        animator.SetTrigger("FadeEnd");
+
+        Time.timeScale = 0;
+
         ammoCanvas.enabled = false;
         batteryCanvas.enabled = false;
+        healthCanvas.enabled = false;
         
         background.enabled = true;
         WinCanvas.enabled = true;
-        GenerateWinCanvasText();
 
-        Time.timeScale = 0;
+        GenerateWinCanvasText();
 
         FindObjectOfType<PlayerHealth>().GetComponent<AudioSource>().enabled = false;
 
@@ -62,11 +68,22 @@ public class GameEnd : MonoBehaviour
         Cursor.visible = true;
         
         
+        
     }
 
-    private void DisableAudioRelated()
+    IEnumerator FadeOutSounds ()
     {
-        ;
+        float fadeOutTime = 2f;
+        float startVolume = ambientSounds.volume;
+
+        while (ambientSounds.volume > 0) {
+            ambientSounds.volume -= startVolume * Time.deltaTime / fadeOutTime;
+            print("called");
+            yield return null;
+        }
+        
+        
+
     }
 
     private void GenerateWinCanvasText()

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Weapon : MonoBehaviour
 {
@@ -16,7 +17,10 @@ public class Weapon : MonoBehaviour
     [SerializeField] float timeBetweenShots = .3f;
     [SerializeField] AmmoType ammoType;
     [SerializeField] bool canShoot = true;
+
     [SerializeField] TextMeshProUGUI ammoText;
+    [SerializeField] Image lightAmmoIcon, heavyAmmoIcon, shellIcon;
+
     [SerializeField] AudioClip weaponShootingAudio;
     [SerializeField] bool isFullyAutomatic = false;
 
@@ -56,6 +60,24 @@ public class Weapon : MonoBehaviour
     {
         int ammoAmount = ammoSlot.GetCurrentAmmo(ammoType);
         ammoText.text = ammoAmount.ToString();
+
+        switch (ammoType) {
+            case AmmoType.Lightammo:
+                lightAmmoIcon.enabled = true;
+                heavyAmmoIcon.enabled = false;
+                shellIcon.enabled = false;
+            break;
+            case AmmoType.Heavyammo:
+                lightAmmoIcon.enabled = false;
+                heavyAmmoIcon.enabled = true;
+                shellIcon.enabled = false;
+            break;
+            case AmmoType.Shells:
+                lightAmmoIcon.enabled = false;
+                heavyAmmoIcon.enabled = false;
+                shellIcon.enabled = true;
+            break;
+        }
     }
 
     IEnumerator Shoot()
@@ -138,7 +160,6 @@ public class Weapon : MonoBehaviour
             hitTransform.gameObject.GetComponent<EnemySound>().PlayHitImpactSound();
 
             Destroy(impact, 2f);
-            print("zombie");
         }
         else
         {
