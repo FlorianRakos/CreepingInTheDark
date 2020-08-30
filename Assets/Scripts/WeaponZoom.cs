@@ -20,11 +20,8 @@ public class WeaponZoom : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        camera = FindObjectOfType<Camera>();
-
-        
+        camera = FindObjectOfType<Camera>();        
     }
-
   
     void Update() {
 
@@ -36,7 +33,6 @@ public class WeaponZoom : MonoBehaviour
     void OnDisable() {
         ZoomOut();
     }
-
 
     private void SwitchFOV()
     {       

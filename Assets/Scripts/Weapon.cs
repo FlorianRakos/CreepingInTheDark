@@ -22,12 +22,12 @@ public class Weapon : MonoBehaviour
     [SerializeField] Image lightAmmoIcon, heavyAmmoIcon, shellIcon;
 
     [SerializeField] AudioClip weaponShootingAudio;
+    [SerializeField] AudioClip dryFireAudio;
     [SerializeField] bool isFullyAutomatic = false;
 
     [SerializeField] ParticleSystem bloodVFX;
 
     AudioSource audioSource;
-
 
     private void OnEnable()
     {
@@ -38,6 +38,7 @@ public class Weapon : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
+
     void Update()
     {
         if (isFullyAutomatic)
@@ -50,10 +51,7 @@ public class Weapon : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && canShoot)
             { StartCoroutine(Shoot()); }
         }
-
-
         DisplayAmmo();
-
     }
 
     private void DisplayAmmo()
@@ -90,8 +88,10 @@ public class Weapon : MonoBehaviour
             PlayShootingAnimation();
             PlayShootingAudio();
             ProcessRaycast();
+        } else {
+            audioSource.PlayOneShot(dryFireAudio);
         }
-        // else play click sound  
+         
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
@@ -120,8 +120,7 @@ public class Weapon : MonoBehaviour
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, shootingRange))
         {
             CreateHitImpact(hit);
-            //print(hit.transform.name);
-            // todo: add some hit FX
+
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target != null)
             {
@@ -129,13 +128,8 @@ public class Weapon : MonoBehaviour
                     target.decreaseHealth(damage * 5f);
                 } else {
                   target.decreaseHealth(damage);  
-                }
-                
-
+                }                
             }
-
-
-
         }
         else
         {

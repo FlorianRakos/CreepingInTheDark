@@ -10,20 +10,21 @@ public class SceneLoader : MonoBehaviour
 
     void Start () {
         animator = GetComponentInChildren<Animator>();
-        print (animator);
     }
 
     public void LoadGame() {
-
-        animator.SetTrigger("FadeStart");
-        Invoke("LoadScene", 2f);
-
+        
+        animator.SetTrigger("FadeStart");              
+        StartCoroutine(LoadScene());       
     }
 
-    private void LoadScene() {
+    IEnumerator LoadScene() {
 
-                SceneManager.LoadScene(1);
-        Time.timeScale = 1;
+        yield return new WaitForSecondsRealtime(2f);
+
+        SceneManager.LoadScene(1);
+        animator.SetTrigger("FadeEnd");
+        Time.timeScale = 1f;
     }
 
     public void QuitGame() {

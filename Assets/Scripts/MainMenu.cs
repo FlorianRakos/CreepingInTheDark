@@ -12,7 +12,6 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         showMainMenu();
-
     }
 
     public void showMainMenu () {

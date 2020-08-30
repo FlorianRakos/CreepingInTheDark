@@ -23,10 +23,7 @@ public class GameEnd : MonoBehaviour
     EnemyHealth[] enemysTotal;
     int pickupsTotal;
     int pickupsLeft;
-    int enemysKilled = 0;
-
-    
-
+    int enemysKilled = 0;   
 
     void Start() {
         enemysTotal = FindObjectsOfType<EnemyHealth>();
@@ -37,15 +34,24 @@ public class GameEnd : MonoBehaviour
         if(other.GetComponent<PlayerHealth>() != null) {
             animator.SetTrigger("FadeStart");
             StartCoroutine (FadeOutSounds ());
-            Invoke("InitWinSequence", 2f);
+            StartCoroutine(InitWinSequence());
+            FindObjectOfType<SoundOnPlayer>().playCarStartingSound();
+        
+            FindObjectOfType<PlayerHealth>().GetComponent<AudioSource>().enabled = false;
+            FindObjectOfType<WeaponSwitcher>().enabled = false;
+            Weapon[] weapons = FindObjectsOfType<Weapon>();
+            foreach (Weapon weapon in weapons)
+            { weapon.enabled = false;}                   
         }
     }
 
-    private void InitWinSequence()
+    IEnumerator InitWinSequence()
     {
+        yield return new WaitForSecondsRealtime(2f);
+        Time.timeScale = 0f;
         animator.SetTrigger("FadeEnd");
 
-        Time.timeScale = 0;
+        
 
         ammoCanvas.enabled = false;
         batteryCanvas.enabled = false;
@@ -56,14 +62,7 @@ public class GameEnd : MonoBehaviour
 
         GenerateWinCanvasText();
 
-        FindObjectOfType<PlayerHealth>().GetComponent<AudioSource>().enabled = false;
 
-        FindObjectOfType<WeaponSwitcher>().enabled = false;
-        Weapon[] weapons = FindObjectsOfType<Weapon>();
-        foreach (Weapon weapon in weapons)
-        {
-            weapon.enabled = false;
-        } 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         
@@ -73,12 +72,12 @@ public class GameEnd : MonoBehaviour
 
     IEnumerator FadeOutSounds ()
     {
-        float fadeOutTime = 2f;
+        float fadeOutTime = 1.9f;
         float startVolume = ambientSounds.volume;
 
         while (ambientSounds.volume > 0) {
-            ambientSounds.volume -= startVolume * Time.deltaTime / fadeOutTime;
-            print("called");
+            
+            ambientSounds.volume -= startVolume * Time.unscaledDeltaTime / fadeOutTime;
             yield return null;
         }
         

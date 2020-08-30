@@ -11,24 +11,11 @@ public class BloodSplatter : MonoBehaviour
     [SerializeField] float yMin;
     [SerializeField] float yMax;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     public void paintBloodSplatter() {
         float x = Random.Range(xMin, xMax);
         float y = Random.Range(yMin, yMax);
         Vector3 randomPos = new Vector3 (x, y, 0f);
-
-        //Image bloodSpaltter = Instantiate(bloodSpatterPrefab, randomPos, Quaternion.Euler(0f, 0f, Random.Range(0, 360)));
 
         Image bloodSpaltter = Instantiate(bloodSpatterPrefab) as Image;
         bloodSpaltter.transform.SetParent (gameObject.transform, false);

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoType: 2
-  ammoAmount: 15
+  ammoAmount: 30
 --- !u!82 &7493923999843934447
 AudioSource:
   m_ObjectHideFlags: 0

@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 471352}
   - component: {fileID: 3350400}
   - component: {fileID: 2313678}
+  - component: {fileID: 5979476142483784323}
   m_Layer: 0
   m_Name: Box01
   m_TagString: Untagged
@@ -110,3 +111,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5979476142483784323
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172492}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c1bb866d37b76c14d99fe915f2a43a06, type: 3}
