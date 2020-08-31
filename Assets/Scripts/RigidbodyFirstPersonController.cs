@@ -10,7 +10,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     {
         [Serializable]
         public class MovementSettings
-        {
+        { 
             public float ForwardSpeed = 8.0f;   // Speed when walking forward
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
@@ -19,6 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
+            
 
 #if !MOBILE_INPUT
             private bool m_Running;
@@ -30,7 +31,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 if (input.x > 0 || input.x < 0)
                 {
                     //strafe
-                    CurrentTargetSpeed = StrafeSpeed;
+                    CurrentTargetSpeed = StrafeSpeed;                    
                 }
                 if (input.y < 0)
                 {

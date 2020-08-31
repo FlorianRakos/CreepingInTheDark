@@ -4047,9 +4047,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You thought you would be safe at your summer House in the mountains...
-    but the Zombie Apocalypse has already reached out even to your remote Location.
-    Find what you can grab and escape the Valley.
+  m_text: You thought you would be safe at your summer house in the mountains...
+    but the zombie apocalypse has already reached out even to your remote location.
+    Take whatever supplys you can grab and escape the valley of the undead.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
@@ -4118,12 +4118,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1330148655}
-    characterCount: 196
+    characterCount: 222
     spriteCount: 0
-    spaceCount: 34
-    wordCount: 35
+    spaceCount: 38
+    wordCount: 39
     linkCount: 0
-    lineCount: 5
+    lineCount: 6
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

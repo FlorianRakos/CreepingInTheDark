@@ -298,12 +298,15 @@ MonoBehaviour:
     smooth: 1
     smoothTime: 18
     lockCursor: 1
+    test: 1
   advancedSettings:
     groundCheckDistance: 0.1
     stickToGroundHelperDistance: 0.6
-    slowDownRate: 20
+    slowDownRate: 40
     airControl: 0
-    shellOffset: 0
+    shellOffset: 0.1
+  audioWalking: {fileID: 8300000, guid: 2a7af88689fdb204eab7b116130cbd0c, type: 3}
+  audioRunning: {fileID: 8300000, guid: c6084eee7c2f2fe418df784e84bdad55, type: 3}
 --- !u!114 &957739133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -342,7 +345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234ceff3778bd6248a853d2d61866e18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammoAmount: 20
+  ammoSlots: []
 --- !u!1 &2008851201
 GameObject:
   m_ObjectHideFlags: 0

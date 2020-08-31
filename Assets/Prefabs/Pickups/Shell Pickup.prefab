@@ -180,7 +180,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.2
+  m_Radius: 1.92
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &197337125821479294
 MonoBehaviour:
@@ -196,7 +196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoType: 1
   ammoAmount: 5
-  pickUpSound: {fileID: 8300000, guid: d0a758a53985b1046a7d4829ce9d915f, type: 3}
 --- !u!82 &2752894215243674489
 AudioSource:
   m_ObjectHideFlags: 0

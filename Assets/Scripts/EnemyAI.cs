@@ -12,10 +12,12 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRange = 30f;
     [SerializeField] float turnSpeed = 10f;
 
+    
+
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
-    
+    bool hasPlayedProvokedSounds = false;
 
     void Start()
     {
@@ -30,6 +32,11 @@ public class EnemyAI : MonoBehaviour
         if (isProvoked)
         {
             EngageTarget();
+            if (!hasPlayedProvokedSounds) {
+                GetComponent<EnemySound>().PlayAlertedSounds();
+                hasPlayedProvokedSounds = true;
+            }
+            
         }
         else if (distanceToTarget <= chaseRange)
         {

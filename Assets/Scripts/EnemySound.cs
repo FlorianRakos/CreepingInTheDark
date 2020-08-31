@@ -6,6 +6,7 @@ public class EnemySound : MonoBehaviour
 {
     [SerializeField] AudioClip[] AttackSounds;
     [SerializeField] AudioClip[] IdleSounds;
+    [SerializeField] AudioClip[] AlertedSounds;
     [SerializeField] AudioClip hitImpact;
     [SerializeField] float minTime = 5f;
     [SerializeField] float maxTime = 15f;
@@ -26,6 +27,11 @@ public class EnemySound : MonoBehaviour
 
     public void PlayHitImpactSound() {
         audioSource.PlayOneShot(hitImpact, 1f);
+    }
+
+    public void PlayAlertedSounds() {
+        AudioClip myClip = GetRandomClip(AlertedSounds);
+        audioSource.PlayOneShot(myClip);
     }
 
     IEnumerator PlayIdleSounds () {

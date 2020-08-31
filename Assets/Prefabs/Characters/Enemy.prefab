@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf25d151e9ef148a55016cd74721cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 6
 --- !u!95 &3191894817469113262
 Animator:
   serializedVersion: 3
@@ -200,6 +200,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 22feacf4848743943a5490b701782a6f, type: 3}
   - {fileID: 8300000, guid: 1c6452e66ef1b4a44bded6312cb9232c, type: 3}
   - {fileID: 8300000, guid: 8b22a07423293f84db78cf924ce53568, type: 3}
+  AlertedSounds:
+  - {fileID: 8300000, guid: ca2e90f6c7be57340b1e60bebaaf3ac4, type: 3}
+  - {fileID: 8300000, guid: 5cad86b8aeb2fe247a5e85c80baf3094, type: 3}
   hitImpact: {fileID: 8300000, guid: 2cea2c4691fe7bb41a0f9a17c7310f76, type: 3}
   minTime: 5
   maxTime: 15

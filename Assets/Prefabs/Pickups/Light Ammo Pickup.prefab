@@ -195,8 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ammoType: 0
-  ammoAmount: 10
-  pickUpSound: {fileID: 8300000, guid: d0a758a53985b1046a7d4829ce9d915f, type: 3}
+  ammoAmount: 15
 --- !u!82 &3245429681924085996
 AudioSource:
   m_ObjectHideFlags: 0
