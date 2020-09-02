@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] Camera FPCamera;
     [SerializeField] float shootingRange = 100f;
     [SerializeField] float damage = 30f;
+    [SerializeField] float damageDropoff = 0.001f;
     [SerializeField] ParticleSystem muzzleFlash;
     [SerializeField] GameObject hitEffect;
     [SerializeField] Ammo ammoSlot;
@@ -88,6 +89,7 @@ public class Weapon : MonoBehaviour
             PlayShootingAnimation();
             PlayShootingAudio();
             ProcessRaycast();
+            IncreaseEnemyRange();
         } else {
             audioSource.PlayOneShot(dryFireAudio);
         }
@@ -95,6 +97,15 @@ public class Weapon : MonoBehaviour
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
+
+    }
+
+    private void IncreaseEnemyRange()
+    {
+        EnemyAI [] enemies = FindObjectsOfType<EnemyAI>();
+        foreach (EnemyAI enemy in enemies) {
+            enemy.IncreaseRange();
+        }
 
     }
 
@@ -117,17 +128,23 @@ public class Weapon : MonoBehaviour
     private void ProcessRaycast()
     {
         RaycastHit hit;
-        if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, shootingRange))
+        Vector3 raycastStart = FPCamera.transform.position;
+        
+        if (Physics.Raycast(raycastStart, FPCamera.transform.forward, out hit, shootingRange))
         {
+
             CreateHitImpact(hit);
 
             EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target != null)
             {
+                float targetDistance = Vector3.Distance(raycastStart, target.transform.position);
+                float adjustedDamage = damage * (1f - damageDropoff * targetDistance);                
                 if(hit.collider.GetType() == typeof(SphereCollider)) {
-                    target.decreaseHealth(damage * 5f);
+
+                    target.decreaseHealth(adjustedDamage * 3f);
                 } else {
-                  target.decreaseHealth(damage);  
+                  target.decreaseHealth(adjustedDamage);  
                 }                
             }
         }

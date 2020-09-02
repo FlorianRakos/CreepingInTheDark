@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] Transform target;
     [SerializeField] float chaseRange = 30f;
+    [SerializeField] float chaseRangeIncreaseOnPlayerShot = 5f;
     [SerializeField] float turnSpeed = 10f;
 
     
@@ -79,6 +80,16 @@ public class EnemyAI : MonoBehaviour
         
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.localRotation, lookRotation, turnSpeed * Time.deltaTime);
+    }
+
+    public void IncreaseRange() {
+        StartCoroutine(IncreaseChaseRange());
+    }
+
+    IEnumerator IncreaseChaseRange () {
+        chaseRange += chaseRangeIncreaseOnPlayerShot;
+        yield return new WaitForSeconds(1f);
+        chaseRange -= chaseRangeIncreaseOnPlayerShot;
     }
 
     void OnDrawGizmosSelected()

@@ -103,7 +103,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5755979401361255657}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.7
   m_Speed: 0
   m_Acceleration: 0
   avoidancePriority: 50
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   chaseRange: 10
+  chaseRangeIncreaseOnPlayerShot: 5
   turnSpeed: 3.5
 --- !u!114 &5824868353560275196
 MonoBehaviour:
@@ -156,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bf25d151e9ef148a55016cd74721cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 6
+  damage: 10
 --- !u!95 &3191894817469113262
 Animator:
   serializedVersion: 3
