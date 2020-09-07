@@ -105,3 +105,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d46e4f45eaf8d04bb32e268f95a979f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  chargeDecay: 0.015
+  charge: 1
+  flashingTime: 0.2

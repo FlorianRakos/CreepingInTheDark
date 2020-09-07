@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlashLight : MonoBehaviour
 {
 
-    [SerializeField] float lightdecay = .02f;
+    [SerializeField] float chargeDecay = .02f;
     [SerializeField] float charge = 1f;
     [SerializeField] float flashingTime = .2f;
     bool lightActive = true;
@@ -32,7 +32,7 @@ public class FlashLight : MonoBehaviour
 
         if (lightActive) {
             myLight.enabled = true;
-            charge -= (lightdecay * Time.deltaTime);
+            charge -= (chargeDecay * Time.deltaTime);
             myLight.intensity = brightness * charge;
 
         } else {

@@ -142,7 +142,7 @@ public class Weapon : MonoBehaviour
                 float adjustedDamage = damage * (1f - damageDropoff * targetDistance);                
                 if(hit.collider.GetType() == typeof(SphereCollider)) {
 
-                    target.decreaseHealth(adjustedDamage * 3f);
+                    target.decreaseHealth(adjustedDamage * 4f);
                 } else {
                   target.decreaseHealth(adjustedDamage);  
                 }                
