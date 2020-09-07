@@ -10,19 +10,16 @@ public class EnemyAttack : MonoBehaviour
 
   void Start()
   {
-      target = FindObjectOfType<PlayerHealth>();
+    target = FindObjectOfType<PlayerHealth>();
   }
 
   public void AttackHitEvent()
   {
     if (target == null) return;
     target.TakeDamage(damage);
-
   }
 
   public void AttackStartEvent() {
     GetComponent<EnemySound>().PlayAttackSound();
   }
-
-
 }

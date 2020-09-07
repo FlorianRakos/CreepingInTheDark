@@ -11,26 +11,25 @@ public class BloodSplatter : MonoBehaviour
     [SerializeField] float yMin;
     [SerializeField] float yMax;
 
-
-    public void paintBloodSplatter() {
+    public void paintBloodSplatter()
+    {
         float x = Random.Range(xMin, xMax);
         float y = Random.Range(yMin, yMax);
-        Vector3 randomPos = new Vector3 (x, y, 0f);
+        Vector3 randomPos = new Vector3(x, y, 0f);
 
         Image bloodSpaltter = Instantiate(bloodSpatterPrefab) as Image;
-        bloodSpaltter.transform.SetParent (gameObject.transform, false);
+        bloodSpaltter.transform.SetParent(gameObject.transform, false);
         bloodSpaltter.transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(0, 360));
         bloodSpaltter.transform.position = randomPos;
 
-        StartCoroutine(FadeOutBlood(bloodSpaltter)) ;
-
+        StartCoroutine(FadeOutBlood(bloodSpaltter));
     }
 
-
-    IEnumerator FadeOutBlood(Image splatter) {
+    IEnumerator FadeOutBlood(Image splatter)
+    {
 
         yield return new WaitForSeconds(2f);
-        splatter.CrossFadeColor(new Color (0f, 0f, 0f, 0f), 4f, true, true);    
+        splatter.CrossFadeColor(new Color(0f, 0f, 0f, 0f), 4f, true, true);
         Destroy(splatter.gameObject, 4f);
 
     }

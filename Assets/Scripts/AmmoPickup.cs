@@ -8,10 +8,10 @@ public class AmmoPickup : MonoBehaviour
     [SerializeField] AmmoType ammoType;
     [SerializeField] int ammoAmount = 10;
 
-
-
-    private void OnTriggerEnter(Collider other) {
-        if(other.gameObject.tag == "Player") {
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
             PickUpAmmo();
         }
     }
@@ -21,6 +21,5 @@ public class AmmoPickup : MonoBehaviour
         FindObjectOfType<Ammo>().IncreaseAmmo(ammoType, ammoAmount);
         FindObjectOfType<SoundOnPlayer>().playAmmoPickupSound();
         Destroy(gameObject);
-        
     }
 }

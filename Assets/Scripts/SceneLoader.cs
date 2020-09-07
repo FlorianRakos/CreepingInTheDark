@@ -5,29 +5,30 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    
+
     Animator animator;
 
-    void Start () {
+    void Start()
+    {
         animator = GetComponentInChildren<Animator>();
     }
 
-    public void LoadGame() {
-        
-        animator.SetTrigger("FadeStart");              
-        StartCoroutine(LoadScene());       
+    public void LoadGame()
+    {
+        animator.SetTrigger("FadeStart");
+        StartCoroutine(LoadScene());
     }
 
-    IEnumerator LoadScene() {
-
+    IEnumerator LoadScene()
+    {
         yield return new WaitForSecondsRealtime(2f);
-
         SceneManager.LoadScene(1);
         animator.SetTrigger("FadeEnd");
         Time.timeScale = 1f;
     }
 
-    public void QuitGame() {
+    public void QuitGame()
+    {
         Application.Quit();
     }
 }

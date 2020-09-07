@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class BatteryPickup : MonoBehaviour
 {
-    
 
-
-    void OnTriggerEnter(Collider other) {
-        if(other.gameObject.GetComponent<PlayerHealth>() != null) {
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerHealth>() != null)
+        {
             PickUpBattery();
         }
     }

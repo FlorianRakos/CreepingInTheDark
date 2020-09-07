@@ -8,17 +8,15 @@ using UnityEngine.AI;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
-    
 
-
-    // public method
-    public void decreaseHealth (float decrease) {
+    public void decreaseHealth(float decrease)
+    {
         hitPoints -= decrease;
         BroadcastMessage("OnDamageTaken");
-        if (hitPoints <= 0) {
+        if (hitPoints <= 0)
+        {
             KillEnemy();
         }
-
     }
 
     private void KillEnemy()
@@ -26,7 +24,7 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<Animator>().SetTrigger("die");
         GetComponent<NavMeshAgent>().enabled = false;
         GetComponent<Collider>().enabled = false;
-        GetComponent<SphereCollider>().enabled = false;        
+        GetComponent<SphereCollider>().enabled = false;
         GetComponent<EnemyAI>().enabled = false;
     }
 }

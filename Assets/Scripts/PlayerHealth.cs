@@ -12,22 +12,20 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] float healthPoints = 100f;
 
-
     void Update()
     {
         FindObjectOfType<HealthBar>().adjustHealthbar(healthPoints);
     }
 
-
-
-    public void TakeDamage (float damage) {
-    healthPoints -= damage;
-    //StartCoroutine(bloodFX());
+    public void TakeDamage(float damage)
+    {
+        healthPoints -= damage;
         FindObjectOfType<BloodSplatter>().paintBloodSplatter();
 
-    if (healthPoints <= 0) {
-        GetComponent<DeathHandler>().HandlePlayerDeath();
-    }
+        if (healthPoints <= 0)
+        {
+            GetComponent<DeathHandler>().HandlePlayerDeath();
+        }
     }
 
 }

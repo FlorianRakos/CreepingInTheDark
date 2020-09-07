@@ -12,48 +12,50 @@ public class EnemySound : MonoBehaviour
     [SerializeField] float maxTime = 15f;
 
     AudioSource audioSource;
-    // Start is called before the first frame update
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
         StartCoroutine(PlayIdleSounds());
     }
 
-    
-    public void PlayAttackSound() {
+    public void PlayAttackSound()
+    {
         AudioClip myClip = GetRandomClip(AttackSounds);
         audioSource.PlayOneShot(myClip);
     }
 
-    public void PlayHitImpactSound() {
+    public void PlayHitImpactSound()
+    {
         audioSource.PlayOneShot(hitImpact, 1f);
     }
 
-    public void PlayAlertedSounds() {
+    public void PlayAlertedSounds()
+    {
         AudioClip myClip = GetRandomClip(AlertedSounds);
         audioSource.PlayOneShot(myClip);
     }
 
-    IEnumerator PlayIdleSounds () {
+    IEnumerator PlayIdleSounds()
+    {
         float idleRange = (Random.Range(minTime, maxTime));
 
         yield return new WaitForSeconds(idleRange);
         AudioClip myClip = GetRandomClip(IdleSounds);
-        if(GetComponent<EnemyAI>().enabled) {
-          audioSource.PlayOneShot(myClip);  
-          StartCoroutine(PlayIdleSounds());
+        if (GetComponent<EnemyAI>().enabled)
+        {
+            audioSource.PlayOneShot(myClip);
+            StartCoroutine(PlayIdleSounds());
         }
     }
 
-    private AudioClip GetRandomClip(AudioClip[] clips) {
+    private AudioClip GetRandomClip(AudioClip[] clips)
+    {
         int clipAmount = clips.Length;
         int random = Random.Range(0, clipAmount);
 
         AudioClip clip = clips[random];
         return clip;
     }
-
-
-    
 
 }

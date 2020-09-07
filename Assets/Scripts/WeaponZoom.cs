@@ -11,31 +11,31 @@ public class WeaponZoom : MonoBehaviour
     [SerializeField] float FOVZoomed = 30f;
     [SerializeField] float SensitivityNormal = 2f;
     [SerializeField] float SensitivityZoomed = 1f;
-
     [SerializeField] RigidbodyFirstPersonController fpsController;
-    
 
     bool zoomedIn = false;
 
-    // Start is called before the first frame update
     void Start()
     {
-        camera = FindObjectOfType<Camera>();        
+        camera = FindObjectOfType<Camera>();
     }
-  
-    void Update() {
 
-        if(Input.GetMouseButtonDown(1)) {
+    void Update()
+    {
+
+        if (Input.GetMouseButtonDown(1))
+        {
             SwitchFOV();
         }
     }
 
-    void OnDisable() {
+    void OnDisable()
+    {
         ZoomOut();
     }
 
     private void SwitchFOV()
-    {       
+    {
         if (!zoomedIn)
         {
             ZoomIn();

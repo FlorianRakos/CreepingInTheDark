@@ -7,54 +7,48 @@ public class FlashLight : MonoBehaviour
 
     [SerializeField] float chargeDecay = .02f;
     [SerializeField] float charge = 1f;
-    [SerializeField] float flashingTime = .2f;
+
     bool lightActive = true;
     float brightness;
     Light myLight;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         myLight = GetComponent<Light>();
         brightness = myLight.intensity;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.F)) {
-            if (lightActive) {
-               lightActive = false; 
-            } else {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (lightActive)
+            {
+                lightActive = false;
+            }
+            else
+            {
                 lightActive = true;
             }
         }
 
-        if (lightActive) {
+        if (lightActive)
+        {
             myLight.enabled = true;
             charge -= (chargeDecay * Time.deltaTime);
             myLight.intensity = brightness * charge;
 
-        } else {
+        }
+        else
+        {
             myLight.enabled = false;
         }
 
-        if (charge <= .2) {
-            
-            //StartCoroutine(LightFlashing());
-        }
-        
         FindObjectOfType<BatteryBar>().adjustBatteryBar(charge);
     }
 
-    IEnumerator LightFlashing () {
-        
-        myLight.enabled = false;
-        yield return new WaitForSeconds(flashingTime);
-        myLight.enabled = true;
-    }
-
-    public void IncreaseBatteryCharge () {
+    public void IncreaseBatteryCharge()
+    {
         charge = 1f;
     }
 }

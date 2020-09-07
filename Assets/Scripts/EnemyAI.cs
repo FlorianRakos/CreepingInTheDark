@@ -13,8 +13,6 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float chaseRangeIncreaseOnPlayerShot = 5f;
     [SerializeField] float turnSpeed = 10f;
 
-    
-
     NavMeshAgent navMeshAgent;
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
@@ -26,18 +24,18 @@ public class EnemyAI : MonoBehaviour
         target = FindObjectOfType<PlayerHealth>().transform;
     }
 
-
     void Update()
     {
         distanceToTarget = Vector3.Distance(transform.position, target.position);
         if (isProvoked)
         {
             EngageTarget();
-            if (!hasPlayedProvokedSounds) {
+            if (!hasPlayedProvokedSounds)
+            {
                 GetComponent<EnemySound>().PlayAlertedSounds();
                 hasPlayedProvokedSounds = true;
             }
-            
+
         }
         else if (distanceToTarget <= chaseRange)
         {
@@ -45,14 +43,15 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    public void OnDamageTaken() { //string ref
+    public void OnDamageTaken()
+    {
         isProvoked = true;
     }
 
     private void EngageTarget()
     {
         FaceTarget();
-        
+
         if (distanceToTarget <= navMeshAgent.stoppingDistance + .1f)
         {
             AttackTarget();
@@ -75,20 +74,23 @@ public class EnemyAI : MonoBehaviour
         navMeshAgent.SetDestination(target.position);
     }
 
-    private void FaceTarget() {
+    private void FaceTarget()
+    {
         Vector3 direction = (target.position - transform.position).normalized;
-        
+
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.localRotation, lookRotation, turnSpeed * Time.deltaTime);
     }
 
-    public void IncreaseRange() {
+    public void IncreaseRange()
+    {
         StartCoroutine(IncreaseChaseRange());
     }
 
-    IEnumerator IncreaseChaseRange () {
+    IEnumerator IncreaseChaseRange()
+    {
         chaseRange += chaseRangeIncreaseOnPlayerShot;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.20f);
         chaseRange -= chaseRangeIncreaseOnPlayerShot;
     }
 
@@ -96,9 +98,5 @@ public class EnemyAI : MonoBehaviour
     {
         Gizmos.color = new Color(1, 0, 0, 0.5f);
         Gizmos.DrawWireSphere(transform.position, chaseRange);
-        //Gizmos.color= new Color (1, 0, 1, 0.5f);
-        //Gizmos.DrawWireSphere(transform.position, navMeshAgent.stoppingDistance);
     }
-
-
 }

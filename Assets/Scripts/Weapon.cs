@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] float timeBetweenShots = .3f;
     [SerializeField] AmmoType ammoType;
     [SerializeField] bool canShoot = true;
+    [SerializeField] float recoilStrength = 5f;
 
     [SerializeField] TextMeshProUGUI ammoText;
     [SerializeField] Image lightAmmoIcon, heavyAmmoIcon, shellIcon;
@@ -60,22 +61,23 @@ public class Weapon : MonoBehaviour
         int ammoAmount = ammoSlot.GetCurrentAmmo(ammoType);
         ammoText.text = ammoAmount.ToString();
 
-        switch (ammoType) {
+        switch (ammoType)
+        {
             case AmmoType.Lightammo:
                 lightAmmoIcon.enabled = true;
                 heavyAmmoIcon.enabled = false;
                 shellIcon.enabled = false;
-            break;
+                break;
             case AmmoType.Heavyammo:
                 lightAmmoIcon.enabled = false;
                 heavyAmmoIcon.enabled = true;
                 shellIcon.enabled = false;
-            break;
+                break;
             case AmmoType.Shells:
                 lightAmmoIcon.enabled = false;
                 heavyAmmoIcon.enabled = false;
                 shellIcon.enabled = true;
-            break;
+                break;
         }
     }
 
@@ -90,20 +92,29 @@ public class Weapon : MonoBehaviour
             PlayShootingAudio();
             ProcessRaycast();
             IncreaseEnemyRange();
-        } else {
+            ApplyRecoil();
+        }
+        else
+        {
             audioSource.PlayOneShot(dryFireAudio);
         }
-         
+
 
         yield return new WaitForSeconds(timeBetweenShots);
         canShoot = true;
 
     }
 
+    private void ApplyRecoil()
+    {
+        FPCamera.transform.eulerAngles += new Vector3(-recoilStrength, 0f, 0f);
+    }
+
     private void IncreaseEnemyRange()
     {
-        EnemyAI [] enemies = FindObjectsOfType<EnemyAI>();
-        foreach (EnemyAI enemy in enemies) {
+        EnemyAI[] enemies = FindObjectsOfType<EnemyAI>();
+        foreach (EnemyAI enemy in enemies)
+        {
             enemy.IncreaseRange();
         }
 
@@ -129,7 +140,7 @@ public class Weapon : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 raycastStart = FPCamera.transform.position;
-        
+
         if (Physics.Raycast(raycastStart, FPCamera.transform.forward, out hit, shootingRange))
         {
 
@@ -139,13 +150,16 @@ public class Weapon : MonoBehaviour
             if (target != null)
             {
                 float targetDistance = Vector3.Distance(raycastStart, target.transform.position);
-                float adjustedDamage = damage * (1f - damageDropoff * targetDistance);                
-                if(hit.collider.GetType() == typeof(SphereCollider)) {
+                float adjustedDamage = damage * (1f - damageDropoff * targetDistance);
+                if (hit.collider.GetType() == typeof(SphereCollider))
+                {
 
                     target.decreaseHealth(adjustedDamage * 4f);
-                } else {
-                  target.decreaseHealth(adjustedDamage);  
-                }                
+                }
+                else
+                {
+                    target.decreaseHealth(adjustedDamage);
+                }
             }
         }
         else

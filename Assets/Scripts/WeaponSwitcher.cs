@@ -6,7 +6,7 @@ using UnityEngine;
 public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] int currentWeapon = 0;
-    
+
 
 
     void Start()
@@ -47,8 +47,6 @@ public class WeaponSwitcher : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-
-
             if (currentWeapon >= transform.childCount - 1)
             {
                 currentWeapon = 0;
@@ -61,17 +59,15 @@ public class WeaponSwitcher : MonoBehaviour
 
         if (Input.GetAxis("Mouse ScrollWheel") > 0)
         {
-
             if (currentWeapon <= 0)
             {
-                currentWeapon = transform.childCount -1;;
+                currentWeapon = transform.childCount - 1; ;
             }
             else
             {
                 currentWeapon--;
             }
         };
-
 
     }
 
@@ -81,7 +77,6 @@ public class WeaponSwitcher : MonoBehaviour
 
         foreach (Transform weapon in transform)
         {
-
             if (weaponIndex == currentWeapon)
             {
                 weapon.gameObject.SetActive(true);
@@ -93,6 +88,4 @@ public class WeaponSwitcher : MonoBehaviour
             weaponIndex++;
         }
     }
-
-
 }
